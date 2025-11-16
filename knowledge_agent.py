@@ -1,19 +1,20 @@
 from agno.agent import Agent
 from agno.knowledge.knowledge import Knowledge
-from agno.vectordb.pgvector import PgVector
-from agno.models.openai import OpenAIChat
+from agno.vectordb.lancedb import LanceDb
+from agno.models.deepseek import DeepSeek
 
-# Create a knowledge base with PgVector
+# Create a knowledge base with LanceDB
+# Local vector storage - no database setup required
 knowledge = Knowledge(
-    vector_db=PgVector(
+    vector_db=LanceDb(
         table_name="knowledge_documents",
-        db_url="postgresql+psycopg://ai:ai@localhost:5532/ai"
+        uri="tmp/lancedb"  # Local directory for storage
     ),
 )
 
 # Create an agent with knowledge
 agent = Agent(
-    model=OpenAIChat(id="gpt-4o-mini"),
+    model=DeepSeek(id="deepseek-reasoner"),
     knowledge=knowledge,
     # Enable automatic knowledge search
     search_knowledge=True,
