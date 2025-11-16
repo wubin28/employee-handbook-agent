@@ -109,6 +109,128 @@ setx DEEPSEEK_API_KEY "your-deepseek-api-key"
 python knowledge_agent.py
 ```
 
+## Output
+
+```markdown
+(employee-handbook-agent) ➜  employee-handbook-agent (main))python knowledge_agent.py
+✅ Using FastEmbedEmbedder (free local embedder)
+   Using default FastEmbed model
+INFO Creating table: knowledge_documents
+[2025-11-16T08:20:38Z WARN  lance::dataset::write::insert] No existing dataset at /Users/binwu/temp/employee-handbook-agent/tmp/lancedb/knowledge_documents.lance, it will be created
+INFO skip_if_exists is disabled, disabling upsert
+INFO Loading content: 6131b000-d846-59f3-ac46-b703a2e91f37
+INFO Adding content from path, 6131b000-d846-59f3-ac46-b703a2e91f37, None,
+     ./jd-employee-handbook.pdf, None
+INFO Using Reader: PDFReader
+INFO Reading: jd-employee-handbook.pdf
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 146653.99it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 8727.22it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 8609.00it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 7872.19it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 171897.70it/s]
+Fetching 5 files: 100%|████████████████████████████████████████| 5/5 [00:00<00:00, 55.26it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 77101.18it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 9023.89it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 67650.06it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 18379.95it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 167772.16it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 1516.05it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 192399.27it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 179243.76it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 43062.67it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 101803.50it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 7051.62it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 14037.16it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 185588.67it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 7863.34it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 171897.70it/s]
+Fetching 5 files: 100%|████████████████████████████████████████| 5/5 [00:00<00:00, 68.62it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00, 616.23it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 47233.15it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 31254.13it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 1455.65it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 15185.75it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 171897.70it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 166440.63it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 23912.79it/s]
+WARNING  Contents DB not found for knowledge base: None
+▰▱▱▱▱▱▱ Thinking...
+┏━ Message ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                           ┃
+┃ What is the company policy on annual leave?                                               ┃
+┃                                                                                           ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+INFO Found 10 documents
+┏━ Message ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                           ┃
+┃ What is the company policy on annual leave?                                               ┃
+┃                                                                                           ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┏━ Response (26.1s) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                           ┃
+┃ I'll search our knowledge base to find information about the company's annual leave       ┃
+┃ policy.Based on the search results from the employee handbook, here is the company policy ┃
+┃ on annual leave (年休假):                                                                 ┃
+┃                                                                                           ┃
+┃ ## Annual Leave Policy                                                                    ┃
+┃                                                                                           ┃
+┃ ### Types of Annual Leave                                                                 ┃
+┃ Annual leave includes two components:                                                     ┃
+┃ - **法定年假 (Legal Annual Leave)**: Mandatory annual leave according to Chinese labor    ┃
+┃ law                                                                                       ┃
+┃ - **福利年假 (Welfare Annual Leave)**: Additional company-provided annual leave           ┃
+┃                                                                                           ┃
+┃ ### Legal Annual Leave Entitlement                                                        ┃
+┃ - **1-10 years of total work experience**: 5 days per year                                ┃
+┃ - **10-20 years of total work experience**: 10 days per year                              ┃
+┃ - **20+ years of total work experience**: 15 days per year                                ┃
+┃                                                                                           ┃
+┃ *Note: Work experience is calculated based on total social work experience across all     ┃
+┃ employers, verified at the time of employment.*                                           ┃
+┃                                                                                           ┃
+┃ ### Welfare Annual Leave (for specific employee levels)                                   ┃
+┃ - **M3/P7/T7 level and above**: Up to 10 days annual cap (including legal leave)          ┃
+┃ - **M4/P9/T9 level**: Up to 15 days annual cap                                            ┃
+┃ - **M5/P12/T12 level and above**: Up to 20 days annual cap                                ┃
+┃                                                                                           ┃
+┃ *Welfare annual leave is only available after probation period completion.*               ┃
+┃                                                                                           ┃
+┃ ### Key Policy Details                                                                    ┃
+┃                                                                                           ┃
+┃ 1. **Calculation Unit**: Annual leave is calculated in 1-hour increments, with less than  ┃
+┃ 1 hour counted as 1 hour                                                                  ┃
+┃                                                                                           ┃
+┃ 2. **Annual Leave Restrictions**: Employees cannot take annual leave if they:             ┃
+┃    - Have taken more than 20 days of paid personal leave                                  ┃
+┃    - Have taken extended sick leave (2+ months for <10 years experience, 3+ months for    ┃
+┃ 10-20 years, 4+ months for 20+ years)                                                     ┃
+┃                                                                                           ┃
+┃ 3. **Annual Cycle**: The leave year runs from January 1st to December 31st                ┃
+┃                                                                                           ┃
+┃ 4. **Usage Order**: Employees must use annual leave in this sequence:                     ┃
+┃    - Previous year's remaining legal annual leave                                         ┃
+┃    - Previous year's remaining welfare annual leave                                       ┃
+┃    - Current year's legal annual leave                                                    ┃
+┃    - Current year's welfare annual leave                                                  ┃
+┃                                                                                           ┃
+┃ 5. **Carry-over**: Annual leave generally cannot be carried over to the next year, but if ┃
+┃ work prevents taking leave, the company may arrange for it to be taken by August 31st of  ┃
+┃ the following year                                                                        ┃
+┃                                                                                           ┃
+┃ 6. **Payment**: Annual leave is paid leave (带薪扣减福利假)                               ┃
+┃                                                                                           ┃
+┃ 7. **Pro-rated Leave**: For employees who join during the year, annual leave is pro-rated ┃
+┃ based on remaining calendar days in the year                                              ┃
+┃                                                                                           ┃
+┃ **Source**: JD Employee Handbook, pages 23-24 (jd-employee-handbook.pdf)                  ┃
+┃                                                                                           ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+(employee-handbook-agent) ➜  employee-handbook-agent (main))
+```
+
 ---
 
 ## 自定义问题
