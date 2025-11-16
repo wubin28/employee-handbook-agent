@@ -1,0 +1,63 @@
+┏━ Message ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                                ┃
+┃ What is the company policy on annual leave?                                                                                                    ┃
+┃                                                                                                                                                ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┏━ Response (58.5s) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                                ┃
+┃ I'll search our knowledge base to find information about the company's annual leave policy.Let me search for more specific information about   ┃
+┃ annual leave to get comprehensive details.Based on the information from the employee handbook, here is the company policy on annual leave:     ┃
+┃                                                                                                                                                ┃
+┃ ## Annual Leave Policy                                                                                                                         ┃
+┃                                                                                                                                                ┃
+┃ **Source: JD Group Employee Handbook, pages 23-24**                                                                                            ┃
+┃                                                                                                                                                ┃
+┃ ### 1. Types of Annual Leave                                                                                                                   ┃
+┃ Annual leave includes:                                                                                                                         ┃
+┃ - **法定年假 (Statutory Annual Leave)** - Mandatory by law                                                                                     ┃
+┃ - **福利年假 (Welfare Annual Leave)** - Company supplementary benefit                                                                          ┃
+┃                                                                                                                                                ┃
+┃ ### 2. Statutory Annual Leave Entitlement                                                                                                      ┃
+┃ - **1-10 years of total work experience**: 5 days per year                                                                                     ┃
+┃ - **10-20 years of total work experience**: 10 days per year                                                                                   ┃
+┃ - **20+ years of total work experience**: 15 days per year                                                                                     ┃
+┃                                                                                                                                                ┃
+┃ *Note: Work experience is calculated based on total social work history, not just time with the company.*                                      ┃
+┃                                                                                                                                                ┃
+┃ ### 3. Welfare Annual Leave (for M3/P7/T7 level and above)                                                                                     ┃
+┃ - **M3/P7/T7 level and above**: Annual cap of 10 days                                                                                          ┃
+┃ - **M4/P9/T9 level**: Annual cap of 15 days                                                                                                    ┃
+┃ - **M5/P12/T12 level and above**: Annual cap of 20 days                                                                                        ┃
+┃ - *Welfare annual leave is only available after probation period completion*                                                                   ┃
+┃                                                                                                                                                ┃
+┃ ### 4. Key Policy Details                                                                                                                      ┃
+┃                                                                                                                                                ┃
+┃ **Usage Rules:**                                                                                                                               ┃
+┃ - Minimum unit: 1 hour (less than 1 hour counts as 1 hour)                                                                                     ┃
+┃ - Annual leave calculation period: Calendar year (January 1 - December 31)                                                                     ┃
+┃ - Leave should be used in this order:                                                                                                          ┃
+┃   1. Remaining statutory annual leave from previous year                                                                                       ┃
+┃   2. Remaining welfare annual leave from previous year                                                                                         ┃
+┃   3. Current year's statutory annual leave                                                                                                     ┃
+┃   4. Current year's welfare annual leave                                                                                                       ┃
+┃                                                                                                                                                ┃
+┃ **Carry-over Policy:**                                                                                                                         ┃
+┃ - Annual leave generally cannot be carried over to the next year                                                                               ┃
+┃ - If work reasons prevent usage within the year, company may arrange for leave to be taken by August 31 of the following year                  ┃
+┃                                                                                                                                                ┃
+┃ **New Hire/Departing Employee Calculation:**                                                                                                   ┃
+┃ - For new hires: (Remaining calendar days in year ÷ 365) × annual leave entitlement                                                            ┃
+┃ - For departing employees: (Actual service days in year ÷ 365) × annual leave entitlement                                                      ┃
+┃ - Fractions: Less than 0.5 days = not calculated; 0.5-1 day = 0.5 day                                                                          ┃
+┃                                                                                                                                                ┃
+┃ **Paid Leave:**                                                                                                                                ┃
+┃ - Annual leave is considered "带薪扣减福利假" (paid leave with meal and attendance allowance deductions)                                       ┃
+┃                                                                                                                                                ┃
+┃ ### 5. Restrictions on Annual Leave                                                                                                            ┃
+┃ Employees cannot take statutory annual leave if they:                                                                                          ┃
+┃ - Have taken more than 20 days of unpaid personal leave in the year                                                                            ┃
+┃ - Have taken extended sick leave (2+ months for 1-10 years experience, 3+ months for 10-20 years, 4+ months for 20+ years)                     ┃
+┃ - Meet other statutory conditions that disqualify annual leave                                                                                 ┃
+┃                                                                                                                                                ┃
+┃ This policy ensures compliance with Chinese labor laws while providing additional benefits for senior employees.                               ┃
+┃                                                                                                                       
