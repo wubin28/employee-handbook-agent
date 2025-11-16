@@ -33,10 +33,10 @@ source .venv/bin/activate
 
 ```bash
 # 使用 uv（推荐，更快）
-uv pip install -U agno pypdf pandas fastembed
+uv pip install -U agno pypdf pandas fastembed lancedb openai
 
 # 或使用标准 pip
-pip install -U agno pypdf pandas fastembed
+pip install -U agno pypdf pandas fastembed lancedb openai
 ```
 
 **依赖说明**：
@@ -44,6 +44,8 @@ pip install -U agno pypdf pandas fastembed
 - `pypdf` - PDF 文件读取
 - `pandas` - 数据处理
 - `fastembed` - **免费本地 embedder**（无需 OpenAI API key！）
+- `lancedb` - 在本地存储数据，无须安装数据库
+- `openai` - 虽然使用的是 DeepSeek 模型，但 embedding（文本向量化）功能仍然使用 OpenAI 的服务。这是 agno 库的默认配置，为了方便，这里也安装了OpenAI的库，但不会使用它
 
 ### 步骤 3：配置 API Key
 
@@ -80,27 +82,6 @@ python knowledge_agent.py
 
 ---
 
-## 完整的 macOS 命令总结
-
-从零到运行的完整命令（复制粘贴即可）：
-
-```bash
-# 1. 创建并激活虚拟环境
-uv venv --python 3.12
-source .venv/bin/activate
-
-# 2. 安装所有依赖
-uv pip install -U agno pypdf pandas fastembed
-
-# 3. 设置 API Key
-export DEEPSEEK_API_KEY="your-deepseek-api-key"
-
-# 4. 运行程序
-python knowledge_agent.py
-```
-
----
-
 ## 为什么只需要 DEEPSEEK_API_KEY？
 
 本项目使用 **FastEmbed** 进行文本向量化，完全免费：
@@ -111,7 +92,7 @@ python knowledge_agent.py
 
 ---
 
-## Windows 用户
+## Windows Powershell 用户
 
 ```bash
 # 1. 创建虚拟环境
@@ -119,7 +100,7 @@ python -m venv .venv
 .venv\Scripts\activate
 
 # 2. 安装依赖
-pip install -U agno pypdf pandas fastembed
+pip install -U agno pypdf pandas fastembed lancedb openai
 
 # 3. 设置 API Key
 setx DEEPSEEK_API_KEY "your-deepseek-api-key"
