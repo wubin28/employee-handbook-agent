@@ -1,8 +1,12 @@
-# Core dependencies
-agno
-pypdf
-pandas
+# Employee Handbook Agent Dependencies
+# Install with: pip install -r requirements.txt
 
-# FastEmbed - FREE local embedder (recommended)
-fastembed
+# Core dependencies
+agno         # Agent framework (includes LanceDB)
+pypdf        # PDF file reading
+pandas       # Data processing
+fastembed    # FREE local embedder (no OpenAI API key needed!)
+
+# Installation command:
+# pip install -U agno pypdf pandas fastembed
 

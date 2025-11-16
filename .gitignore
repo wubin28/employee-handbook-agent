@@ -173,6 +173,4 @@ Desktop.ini
 # Project specific
 tmp/
 .fastembed_cache/
-*.pdf
-dialog-*.md
 
