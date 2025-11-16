@@ -12,6 +12,11 @@ knowledge = Knowledge(
     ),
 )
 
+# Add PDF file to knowledge base
+knowledge.add_content(
+    path="./jd-employee-handbook.pdf"
+)
+
 # Create an agent with knowledge
 agent = Agent(
     model=DeepSeek(id="deepseek-reasoner"),
