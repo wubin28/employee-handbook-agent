@@ -170,3 +170,9 @@ Desktop.ini
 *.swp
 .~lock.*
 
+# Project specific
+tmp/
+.fastembed_cache/
+*.pdf
+dialog-*.md
+
