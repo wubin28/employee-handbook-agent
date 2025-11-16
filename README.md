@@ -92,24 +92,24 @@ python knowledge_agent.py
 
 ---
 
-## Windows Powershell 用户
+## Windows wsl2 ubuntu 24.04 用户
 
 ```bash
-# 1. 创建虚拟环境
-python -m venv .venv
-.venv\Scripts\activate
+# 1. 创建并激活虚拟环境
+uv venv --python 3.12
+source .venv/bin/activate
 
-# 2. 安装依赖
-pip install -U agno pypdf pandas fastembed lancedb openai
+# 2. 安装所有依赖
+uv pip install -U agno pypdf pandas fastembed lancedb openai 'httpx[socks]'
 
 # 3. 设置 API Key
-setx DEEPSEEK_API_KEY "your-deepseek-api-key"
+export DEEPSEEK_API_KEY=<your-deepseek-api-key>
 
 # 4. 运行程序
 python knowledge_agent.py
 ```
 
-## Output
+## Output from macOS
 
 ```markdown
 (employee-handbook-agent) ➜  employee-handbook-agent (main))python knowledge_agent.py
@@ -229,6 +229,119 @@ INFO Found 10 documents
 ┃                                                                                           ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 (employee-handbook-agent) ➜  employee-handbook-agent (main))
+```
+
+## Output from wsl2 ubuntu 24.04
+
+```
+(employee-handbook-agent) ➜  employee-handbook-agent git:(main) python knowledge_agent.py
+✅ Using FastEmbedEmbedder (free local embedder)
+   Using default FastEmbed model
+INFO skip_if_exists is disabled, disabling upsert                                           
+INFO Loading content: 6131b000-d846-59f3-ac46-b703a2e91f37                                  
+INFO Adding content from path, 6131b000-d846-59f3-ac46-b703a2e91f37, None,                  
+     ./jd-employee-handbook.pdf, None                                                       
+INFO Using Reader: PDFReader                                                                
+INFO Reading: jd-employee-handbook.pdf                                                      
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 4285.15it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 77961.04it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00,  7.43it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 821.61it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 45889.54it/s]
+Fetching 5 files: 100%|███████████████████████████████████| 5/5 [00:00<00:00, 106454.42it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00, 21.98it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 50655.85it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 852.02it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00, 97.92it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 34606.47it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 1044.09it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 43062.67it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00,  9.74it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 28688.81it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00, 82.15it/s]
+Fetching 5 files: 100%|██████████████████████████████████████| 5/5 [00:00<00:00, 100.37it/s]
+Fetching 5 files: 100%|█████████████████████████████████████| 5/5 [00:00<00:00, 1055.38it/s]
+Fetching 5 files: 100%|███████████████████████████████████████| 5/5 [00:00<00:00, 14.31it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 71575.15it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 40960.00it/s]
+Fetching 5 files: 100%|████████████████████████████████████| 5/5 [00:00<00:00, 41282.52it/s]
+WARNING  Contents DB not found for knowledge base: None                                     
+INFO Found 10 documents                                                                     
+INFO Found 10 documents                                                                     
+┏━ Message ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                          ┃
+┃ What is the company policy on annual leave?                                              ┃
+┃                                                                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┏━ Response (31.1s) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                          ┃
+┃ I'll search our knowledge base to find information about the company's annual leave      ┃
+┃ policy.Let me search for more specific information about annual leave to get a complete  ┃
+┃ picture.Based on the information from the JD Group Employee Handbook, here's the company ┃
+┃ policy on annual leave:                                                                  ┃
+┃                                                                                          ┃
+┃ ## Annual Leave Policy                                                                   ┃
+┃                                                                                          ┃
+┃ **Source: JD Group Employee Handbook, pages 23-24**                                      ┃
+┃                                                                                          ┃
+┃ ### Types of Annual Leave                                                                ┃
+┃ Annual leave includes two components:                                                    ┃
+┃ - **法定年假 (Statutory Annual Leave)** - Mandatory by law                               ┃
+┃ - **福利年假 (Welfare Annual Leave)** - Company-provided additional benefits             ┃
+┃                                                                                          ┃
+┃ ### Statutory Annual Leave Entitlement                                                   ┃
+┃ Based on total work experience (社会工龄):                                               ┃
+┃ - **1-10 years**: 5 days per year                                                        ┃
+┃ - **10-20 years**: 10 days per year                                                      ┃
+┃ - **20+ years**: 15 days per year                                                        ┃
+┃                                                                                          ┃
+┃ *Note: Statutory annual leave entitlement is determined based on the social work         ┃
+┃ experience provided by employees at the time of joining.*                                ┃
+┃                                                                                          ┃
+┃ ### Welfare Annual Leave (for M3/P7/T7 level and above)                                  ┃
+┃ Additional welfare annual leave is provided to higher-level employees:                   ┃
+┃ - **M3/P7/T7 level and above**: Annual cap of 10 days                                    ┃
+┃ - **M4/P9/T9 level**: Annual cap of 15 days                                              ┃
+┃ - **M5/P12/T12 level and above**: Annual cap of 20 days                                  ┃
+┃ - *Welfare annual leave is only available after probation period completion*             ┃
+┃                                                                                          ┃
+┃ ### Key Policy Details                                                                   ┃
+┃                                                                                          ┃
+┃ 1. **Calculation Unit**: Annual leave is calculated in 1-hour units (minimum 1 hour)     ┃
+┃                                                                                          ┃
+┃ 2. **Annual Cycle**: The annual leave year runs from January 1st to December 31st        ┃
+┃                                                                                          ┃
+┃ 3. **Carry-over**: Annual leave generally cannot be carried over to the next year.       ┃
+┃ However, if work reasons prevent taking leave within the year, the company may arrange   ┃
+┃ for it to be taken by August 31st of the following year                                  ┃
+┃                                                                                          ┃
+┃ 4. **Usage Order**: Employees should use annual leave in this order:                     ┃
+┃    - Previous year's remaining statutory annual leave                                    ┃
+┃    - Previous year's welfare annual leave                                                ┃
+┃    - Current year's statutory annual leave                                               ┃
+┃    - Current year's welfare annual leave                                                 ┃
+┃                                                                                          ┃
+┃ 5. **Pro-rated Calculation**: For employees who join during the year, annual leave is    ┃
+┃ calculated as:                                                                           ┃
+┃    (Remaining calendar days in current year / 365) × Annual leave entitlement            ┃
+┃                                                                                          ┃
+┃ 6. **Salary Status**: Annual leave is considered "带薪扣减福利假" (paid deduction        ┃
+┃ welfare leave) - salary is paid but meal subsidies and full attendance bonuses are       ┃
+┃ deducted                                                                                 ┃
+┃                                                                                          ┃
+┃ ### Restrictions on Annual Leave                                                         ┃
+┃ Employees cannot enjoy statutory annual leave in the following circumstances:            ┃
+┃ - Taking more than 20 days of unpaid personal leave                                      ┃
+┃ - Taking sick leave exceeding 2 months (for 1-10 years work experience)                  ┃
+┃ - Taking sick leave exceeding 3 months (for 10-20 years work experience)                 ┃
+┃ - Taking sick leave exceeding 4 months (for 20+ years work experience)                   ┃
+┃ - Other statutory circumstances where annual leave cannot be enjoyed                     ┃
+┃                                                                                          ┃
+┃ This policy ensures compliance with Chinese labor laws while providing additional        ┃
+┃ benefits to senior employees.                                                            ┃
+┃                                                                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+(employee-handbook-agent) ➜  employee-handbook-agent git:(main) 
 ```
 
 ---
