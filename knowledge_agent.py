@@ -1,4 +1,5 @@
 import os
+import getpass
 from agno.agent import Agent
 from agno.knowledge.knowledge import Knowledge
 from agno.vectordb.lancedb import LanceDb
@@ -14,12 +15,18 @@ except ImportError as e:
     print(f"⚠️  FastEmbedEmbedder not available: {e}")
     print("   Using default OpenAI embedder (requires OPENAI_API_KEY)")
 
-# Load API keys from environment variables
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# Get DeepSeek API key from user input (securely)
+print("\n" + "="*60)
+print("🔐 请输入您的 DeepSeek API Key")
+print("   (输入时不会显示，按回车确认)")
+print("="*60)
+DEEPSEEK_API_KEY = getpass.getpass("DeepSeek API Key: ")
 
-if not DEEPSEEK_API_KEY:
-    raise ValueError("DEEPSEEK_API_KEY environment variable is not set")
+if not DEEPSEEK_API_KEY or DEEPSEEK_API_KEY.strip() == "":
+    raise ValueError("DeepSeek API Key 不能为空，请重新运行程序并输入有效的 API Key")
+
+# For OpenAI embedder fallback (if FastEmbed not available)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 if not EMBEDDER_AVAILABLE and not OPENAI_API_KEY:
     raise ValueError(

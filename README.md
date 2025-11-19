@@ -47,22 +47,11 @@ pip install -U agno pypdf pandas fastembed lancedb openai
 - `lancedb` - 在本地存储数据，无须安装数据库
 - `openai` - 虽然使用的是 DeepSeek 模型，但 embedding（文本向量化）功能仍然使用 OpenAI 的服务。这是 agno 库的默认配置，为了方便，这里也安装了OpenAI的库，但不会使用它
 
-### 步骤 3：配置 API Key
+### 步骤 3：获取 DeepSeek API Key
 
-获取 DeepSeek API Key：
-1. 访问 [DeepSeek 平台](https://platform.deepseek.com/api_keys)
-2. 注册并创建 API Key
+访问 [DeepSeek 平台](https://platform.deepseek.com/api_keys) 注册并创建 API Key，准备好后进入下一步。
 
-设置环境变量：
-```bash
-export DEEPSEEK_API_KEY="your-deepseek-api-key"
-```
-
-**提示**：可以将此命令添加到 `~/.zshrc` 以永久保存：
-```bash
-echo 'export DEEPSEEK_API_KEY="your-deepseek-api-key"' >> ~/.zshrc
-source ~/.zshrc
-```
+**注意**：无需设置环境变量，程序运行时会提示您安全输入 API Key（输入时显示为星号）。
 
 ### 步骤 4：运行程序
 
@@ -70,11 +59,12 @@ source ~/.zshrc
 python knowledge_agent.py
 ```
 
-**首次运行**会：
-- ⬇️ 自动下载 FastEmbed 模型（约 60-100MB，仅首次）
-- 📄 读取并处理 PDF 文件
-- 🔢 生成向量并存储到本地数据库
-- 💬 回答问题
+**运行时**程序会：
+1. 🔐 提示您输入 DeepSeek API Key（输入时显示为星号，保护隐私）
+2. ⬇️ 自动下载 FastEmbed 模型（约 60-100MB，仅首次）
+3. 📄 读取并处理 PDF 文件
+4. 🔢 生成向量并存储到本地数据库
+5. 💬 回答问题
 
 **预期时间**：
 - 首次运行：2-5 分钟（下载模型 + 处理 PDF）
@@ -102,10 +92,7 @@ source .venv/bin/activate
 # 2. 安装所有依赖
 uv pip install -U agno pypdf pandas fastembed lancedb openai 'httpx[socks]'
 
-# 3. 设置 API Key
-export DEEPSEEK_API_KEY=<your-deepseek-api-key>
-
-# 4. 运行程序
+# 3. 运行程序（程序会提示您输入 API Key）
 python knowledge_agent.py
 ```
 
@@ -114,6 +101,12 @@ python knowledge_agent.py
 ```markdown
 (employee-handbook-agent) ➜  employee-handbook-agent (main))python knowledge_agent.py
 ✅ Using FastEmbedEmbedder (free local embedder)
+
+============================================================
+🔐 请输入您的 DeepSeek API Key
+   (输入时不会显示，按回车确认)
+============================================================
+DeepSeek API Key: 
    Using default FastEmbed model
 INFO Creating table: knowledge_documents
 [2025-11-16T08:20:38Z WARN  lance::dataset::write::insert] No existing dataset at /Users/binwu/temp/employee-handbook-agent/tmp/lancedb/knowledge_documents.lance, it will be created
@@ -432,17 +425,15 @@ FileNotFoundError: ./jd-employee-handbook.pdf
 **解决方法**：
 确保 `jd-employee-handbook.pdf` 在项目根目录。
 
-### 问题：DEEPSEEK_API_KEY 未设置
+### 问题：DeepSeek API Key 为空
 
 **错误信息**：
 ```
-ValueError: DEEPSEEK_API_KEY environment variable is not set
+ValueError: DeepSeek API Key 不能为空
 ```
 
 **解决方法**：
-```bash
-export DEEPSEEK_API_KEY="your-deepseek-api-key"
-```
+确保在程序提示时输入有效的 API Key。如果意外按下回车，请重新运行程序。
 
 ### 问题：清除缓存重新开始
 

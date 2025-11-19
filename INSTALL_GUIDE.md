@@ -55,12 +55,7 @@ Testing available embedders in agno library...
    pip install 'agno[huggingface]'
    ```
 
-3. **设置环境变量**：
-   ```bash
-   export DEEPSEEK_API_KEY="your-deepseek-api-key"
-   ```
-
-4. **运行程序**：
+3. **运行程序**（程序会提示您输入 API Key）：
    ```bash
    python knowledge_agent.py
    ```
