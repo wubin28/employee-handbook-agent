@@ -63,7 +63,8 @@ agent = Agent(
     search_knowledge=True,
     instructions=[
         "Always search your knowledge base before answering questions",
-        "Include source references in your responses when possible"
+        "Include source references in your responses when possible",
+        "Always respond in Chinese (Simplified Chinese) regardless of the language of the question"
     ]
 )
 
@@ -71,6 +72,6 @@ agent = Agent(
 if __name__ == "__main__":
     # Your agent will automatically search its knowledge to answer
     agent.print_response(
-        "What is the company policy on annual leave?",
+        "公司的年假政策是什么？",
         stream=True
     )
